@@ -7,6 +7,7 @@ def mask_account_card(card_info: str) -> str:
         if char.isdigit():
             break
         index += 1
+    ##
 
     if card_info[:index].strip() == "Счет":
         return card_info[:index] + " " + masks.get_mask_account(card_info[index:])
